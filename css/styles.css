@@ -41,7 +41,7 @@ a{
     text-decoration: none;
 }
 img{
-    max-width: 100%;
+    width: 100%;
 }
 
 .contenedor{
@@ -106,6 +106,7 @@ h3{
 .grid{
     display: grid;
     grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
 }
 @media (min-width:758px) {
      .grid{
@@ -116,17 +117,128 @@ h3{
 /* productos */
 
 .producto{
-
+    background-color: var(--primarioOscuro);
+    padding: 1rem;
 }
-.producto__imagen{
 
-}
 .producto__informacion{
 
 }
 .producto__nombre{
+    font-size: 4rem;
 
 }
-.producto__precio{
+.productos__precio{
+    font-size: 2.8rem;
+    color: var(--secundario);
+}
+.producto__nombre, .productos__precio{
+    font-family: var(--fuentePrincipal);
+    margin: 1rem 8;
+    text-align: center;
+    line-height: 1.2;
+}
+/* Graficas */
+.grafico{
+min-height: 38rem;
+background-repeat: no-repeat;
+background-size: cover;
+grid-column: 1/3;
+}
+.grafico--camisas{
+    grid-row: 2/3;
 
+    background-image: url(../img/grafico1.jpg);
+
+}
+.grafico--node{
+    background-image: url(../img/grafico2.jpg);
+    grid-row: 8/9;
+}
+@media (min-width:758px) { 
+    .grafico--node {
+        grid-row: 5/6;
+        grid-column: 2/4;
+    }
+}
+
+/* Nosotros */
+
+.nosotros {
+    display: grid;
+    grid-template-rows: repeat(2, auto);
+}
+
+@media (min-width: 768px) {
+    .nosotros {
+        grid-template-columns: repeat(2, 1fr);
+        column-gap: 2rem;
+    }
+}
+
+.nosotros__imagen {
+    grid-row: 1 / 2;
+}
+
+@media (min-width: 768px) {
+    .nosotros__imagen {
+        grid-column: 2 / 3;
+    }
+}
+
+/* Bloques */
+.bloque{
+    text-align: center;
+}
+.bloques{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    gap: 2rem;
+}
+@media (min-width: 768px) {
+    .bloques{
+        grid-template-columns: repeat(4,1fr);
+    }
+}
+.bloque__titulo{
+    margin: 0;
+}
+/* .producto */
+
+@media (min-width:768px) {
+    .camisa{
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+        
+    }
+     
+}
+.formulario{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    gap: 2rem;
+}
+.formulario__campo {
+    border-color: var(--primarioOscuro);
+    border-width: 1rem;
+    border-style: solid;
+    background-color: transparent;
+    color: var(--blanco);
+    font-size: 2rem;
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 1rem;
+    appearance: none;
+}
+.formulario__submit{
+    background-color: var(--secundario);
+    border: none;
+    font-size: 2rem;
+    font-family: var(--fuentePrincipal);
+    padding: 2rem;
+    transition: background-color .3s ease;
+    grid-column: 1/ 3;
+}
+.formulario__submit:hover{
+    cursor: pointer;
+    background-color: var(--secundarioOscuro);
 }
